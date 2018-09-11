@@ -4,22 +4,22 @@
     <div class="one-three">
       <div class="image__container">
         <a href="{{section.settings.category_link_1}}">
-          {% if section.settings.image_1 == blank %}
-            <img class="img-responsive" src="{{ 'no-image.gif' | asset_img_url: '600x700'  }}" alt="" />
-          {% else %}
-            <img class="img-responsive" src="{{ section.settings.image_1 | img_url: '600x700'  }}" alt="" />
-          {% endif %}
+          {% unless section.settings.image_1 == blank %}
+            <source srcset="{{ section.settings.image_1 | img_url: '600x' }} 1x, {{ section.settings.image_1 | img_url: '600x', scale: 2 }} 2x" media="(min-width: 768px)">
+            <img class="img-responsive" src="{{ section.settings.image_1 | img_url: '600x' }}" alt="{{ section.settings.image_1.alt }}"
+                 srcset="{{ section.settings.image_1 | img_url: '600x' }} 1x, {{ section.settings.image_1 | img_url: '600x', scale: 2 }} 2x">
+          {% endunless %}
         </a>
       </div>
     </div>     
     <div class="one-three">
       <div class="image__container">
         <a href="{{section.settings.category_link_2}}">
-          {% if section.settings.image_2 == blank %}
-            <img class="img-responsive" src="{{ 'no-image.gif' | asset_img_url: '600x700'  }}" alt="" />
-          {% else %}
-            <img class="img-responsive" src="{{ section.settings.image_2 | img_url: '600x700'  }}" alt="" />
-          {% endif %}   
+          {% unless section.settings.image_2 == blank %}
+            <source srcset="{{ section.settings.image_2 | img_url: '600x' }} 1x, {{ section.settings.image_2 | img_url: '600x', scale: 2 }} 2x" media="(min-width: 768px)">
+            <img class="img-responsive" src="{{ section.settings.image_2 | img_url: '600x' }}" alt="{{ section.settings.image_2.alt }}"
+                 srcset="{{ section.settings.image_2 | img_url: '600x' }} 1x, {{ section.settings.image_2 | img_url: '600x', scale: 2 }} 2x">
+          {% endunless %} 
         </a>
       </div>
     </div>
@@ -27,11 +27,11 @@
     <div class="one-three">
       <div class="image__container">
         <a href="{{section.settings.category_link_3}}">
-          {% if section.settings.image_3 == blank %}
-            <img class="img-responsive" src="{{ 'no-image.gif' | asset_img_url: '600x700'  }}" alt="" />            
-          {% else %}
-            <img class="img-responsive" src="{{ section.settings.image_3 | img_url: '600x700'  }}" alt="" />
-          {% endif %}   
+          {% unless section.settings.image_3 == blank %}
+            <source srcset="{{ section.settings.image_3 | img_url: '600x' }} 1x, {{ section.settings.image_3 | img_url: '600x', scale: 2 }} 2x" media="(min-width: 768px)">
+            <img class="img-responsive" src="{{ section.settings.image_3 | img_url: '600x' }}" alt="{{ section.settings.image_3.alt }}"
+                 srcset="{{ section.settings.image_3 | img_url: '600x' }} 1x, {{ section.settings.image_3 | img_url: '600x', scale: 2 }} 2x">
+          {% endunless %} 
         </a>
       </div>
     </div>    
@@ -40,11 +40,11 @@
     <div class="one-whole">
       <div class="image__container">
         <a href="{{section.settings.category_link_4}}">
-          {% if section.settings.image_4 == blank %}
-            <img class="img-responsive" src="{{ 'no-image.gif' | asset_img_url:'1900x700'  }}" alt="" />
-          {% else %}
-            <img class="img-responsive" src="{{ section.settings.image_4 | img_url:'1900x700'  }}" alt="" />
-          {% endif %}
+          {% unless section.settings.image_4 == blank %}
+            <source srcset="{{ section.settings.image_3 | img_url: '1900x' }} 1x, {{ section.settings.image_4 | img_url: '1900x', scale: 2 }} 2x" media="(min-width: 768px)">
+            <img class="img-responsive" src="{{ section.settings.image_4 | img_url: '1900x' }}" alt="{{ section.settings.image_4.alt }}"
+                 srcset="{{ section.settings.image_4 | img_url: '1900x' }} 1x, {{ section.settings.image_4 | img_url: '1900x', scale: 2 }} 2x">
+          {% endunless %} 
         </a>
       </div>
     </div>  
@@ -66,7 +66,7 @@
           "en": "Heading 1"
         },        
         "default": {
-          "en": "Clothing Category 1"
+          "en": "Men"
         }
       },
       {
