@@ -1,0 +1,242 @@
+<div class="container featured-category-full_width">
+  
+  <div class="items-grid">
+    <div class="one-three">
+      <div class="image__container">
+        <a href="{{section.settings.category_link_1}}">
+          {% if section.settings.image_1 == blank %}
+            <img class="img-responsive" src="{{ 'no-image.gif' | asset_img_url: '600x700'  }}" alt="" />
+          {% else %}
+            <img class="img-responsive" src="{{ section.settings.image_1 | img_url: '600x700'  }}" alt="" />
+          {% endif %}
+        </a>
+      </div>
+    </div>     
+    <div class="one-three">
+      <div class="image__container">
+        <a href="{{section.settings.category_link_2}}">
+          {% if section.settings.image_2 == blank %}
+            <img class="img-responsive" src="{{ 'no-image.gif' | asset_img_url: '600x700'  }}" alt="" />
+          {% else %}
+            <img class="img-responsive" src="{{ section.settings.image_2 | img_url: '600x700'  }}" alt="" />
+          {% endif %}   
+        </a>
+      </div>
+    </div>
+
+    <div class="one-three">
+      <div class="image__container">
+        <a href="{{section.settings.category_link_3}}">
+          {% if section.settings.image_3 == blank %}
+            <img class="img-responsive" src="{{ 'no-image.gif' | asset_img_url: '600x700'  }}" alt="" />            
+          {% else %}
+            <img class="img-responsive" src="{{ section.settings.image_3 | img_url: '600x700'  }}" alt="" />
+          {% endif %}   
+        </a>
+      </div>
+    </div>    
+  </div>
+  <div class="items-grid">
+    <div class="one-whole">
+      <div class="image__container">
+        <a href="{{section.settings.category_link_4}}">
+          {% if section.settings.image_4 == blank %}
+            <img class="img-responsive" src="{{ 'no-image.gif' | asset_img_url:'1900x700'  }}" alt="" />
+          {% else %}
+            <img class="img-responsive" src="{{ section.settings.image_4 | img_url:'1900x700'  }}" alt="" />
+          {% endif %}
+        </a>
+      </div>
+    </div>  
+  </div>
+  
+</div>
+
+{% schema %}
+  {
+    "name": {
+      "en": "Featured categories"
+    },
+    "class": "index-section index-section--featured",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title_1",
+        "label": {
+          "en": "Heading 1"
+        },        
+        "default": {
+          "en": "Clothing Category 1"
+        }
+      },
+      {
+        "type": "url",
+        "id": "category_link_1",
+        "label": {
+          "en": "Category link 1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "btn_label_1",
+        "label": {
+          "en": "Button Label 1"
+        }
+      },
+      {
+        "type": "image_picker",
+        "id": "image_1",
+        "label": {
+          "en": "Image",
+          "de": "Foto",
+          "fr": "Image",
+          "it": "Immagine",
+          "ja": "画像",
+          "es": "Imagen",
+          "pt-BR": "Imagem"
+        }
+      },
+      {
+        "type": "text",
+        "id": "title_2",
+        "label": {
+          "en": "Heading 2",
+          "de": "Titel",
+          "fr": "En-tête",
+          "it": "Heading",
+          "ja": "見出し",
+          "es": "Título",
+          "pt-BR": "Título"
+        },        
+        "default": {
+          "en": "Clothing Category 2"
+        }
+
+      },
+      {
+        "type": "url",
+        "id": "category_link_2",
+        "label": {
+          "en": "Category link 2"
+        }
+      },
+      {
+        "type": "text",
+        "id": "btn_label_2",
+        "label": {
+          "en": "Button Label 2"
+        }
+      },
+      {
+        "type": "image_picker",
+        "id": "image_2",
+        "label": {
+          "en": "Image",
+          "de": "Foto",
+          "fr": "Image",
+          "it": "Immagine",
+          "ja": "画像",
+          "es": "Imagen",
+          "pt-BR": "Imagem"
+        }
+      },
+      {
+        "type": "text",
+        "id": "title_3",
+        "label": {
+          "en": "Heading 3",
+          "de": "Titel",
+          "fr": "En-tête",
+          "it": "Heading",
+          "ja": "見出し",
+          "es": "Título",
+          "pt-BR": "Título"
+        },        
+        "default": {
+          "en": "Clothing Category 3"
+        }
+      },
+      {
+        "type": "url",
+        "id": "category_link_3",
+        "label": {
+          "en": "Category link 3"
+        }
+      },
+      {
+        "type": "text",
+        "id": "btn_label_3",
+        "label": {
+          "en": "Button Label 3"
+        }
+      },
+      {
+        "type": "image_picker",
+        "id": "image_3",
+        "label": {
+          "en": "Image",
+          "de": "Foto",
+          "fr": "Image",
+          "it": "Immagine",
+          "ja": "画像",
+          "es": "Imagen",
+          "pt-BR": "Imagem"
+        }
+      },
+      {
+        "type": "text",
+        "id": "title_4",
+        "label": {
+          "en": "Heading 4",
+          "de": "Titel",
+          "fr": "En-tête",
+          "it": "Heading",
+          "ja": "見出し",
+          "es": "Título",
+          "pt-BR": "Título"
+        },        
+        "default": {
+          "en": "Clothing Category 4"
+        }
+      },
+      {
+        "type": "url",
+        "id": "category_link_4",
+        "label": {
+          "en": "Category link 4"
+        }
+      },
+      {
+        "type": "text",
+        "id": "btn_label_4",
+        "label": {
+          "en": "Button Label 4"
+        }
+      },
+      {
+        "type": "image_picker",
+        "id": "image_4",
+        "label": {
+          "en": "Image",
+          "de": "Foto",
+          "fr": "Image",
+          "it": "Immagine",
+          "ja": "画像",
+          "es": "Imagen",
+          "pt-BR": "Imagem"
+        }
+      }
+
+    ],
+    "presets": [
+      {
+        "name": {
+          "en": "Featured categories"
+        },
+        "category": {
+          "en": "Collection"
+        }
+      }
+    ]
+  }
+{% endschema %}
