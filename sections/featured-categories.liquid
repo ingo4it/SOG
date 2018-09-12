@@ -29,7 +29,7 @@
         <a href="{{section.settings.category_link_2}}">
           {% unless section.settings.image_2 == blank %}
             <picture class="cat-pic-card">
-              <source srcset="{{ section.settings.image_2 | img_url: sizes.last }} 1x, {{ section.settings.image_1 | img_url: sizes.last, scale: 2 }} 2x" media="(min-width: 768px)">
+              <source srcset="{{ section.settings.image_2 | img_url: sizes.last }} 1x, {{ section.settings.image_2 | img_url: sizes.last, scale: 2 }} 2x" media="(min-width: 768px)">
               <img class="img-responsive" 
                 src="{{ section.settings.image_2 | img_url: sizes.first }}"
                 data-src="{{ section.settings.image_2 | img_url: sizes.last }}"
@@ -49,7 +49,7 @@
         <a href="{{section.settings.category_link_3}}">
           {% unless section.settings.image_3 == blank %}
             <picture class="cat-pic-card">
-              <source srcset="{{ section.settings.image_3 | img_url: sizes.last }} 1x, {{ section.settings.image_1 | img_url: sizes.last, scale: 2 }} 2x" media="(min-width: 768px)">
+              <source srcset="{{ section.settings.image_3 | img_url: sizes.last }} 1x, {{ section.settings.image_3 | img_url: sizes.last, scale: 2 }} 2x" media="(min-width: 768px)">
               <img class="img-responsive" 
                 src="{{ section.settings.image_3 | img_url: sizes.first }}"
                 data-src="{{ section.settings.image_3 | img_url: sizes.last }}"
@@ -71,7 +71,7 @@
         <a href="{{section.settings.category_link_4}}">
           {% unless section.settings.image_4 == blank %}
             <picture class="cat-pic-card">
-              <source srcset="{{ section.settings.image_4 | img_url: sizes.last }} 1x, {{ section.settings.image_1 | img_url: sizes.last, scale: 2 }} 2x" media="(min-width: 768px)">
+              <source srcset="{{ section.settings.image_4 | img_url: sizes.last }} 1x, {{ section.settings.image_4 | img_url: sizes.last, scale: 2 }} 2x" media="(min-width: 768px)">
               <img class="img-responsive" 
                 src="{{ section.settings.image_4 | img_url: sizes.first }}"
                 data-src="{{ section.settings.image_4 | img_url: sizes.last }}"
