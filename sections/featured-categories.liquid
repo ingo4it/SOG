@@ -7,16 +7,19 @@
     <div class="one-three">
       <div class="image__container">
         <a href="{{section.settings.category_link_1}}">
-          {% unless section.settings.image_1 == blank %}            
-            <img class="img-responsive" 
-              src="{{ section.settings.image_1 | img_url: sizes.first }}"
-              data-src="{{ section.settings.image_1 | img_url: sizes.last }}"
-              alt="{{ section.settings.image_1.alt }}"
-              srcset="{%- for size in sizes -%}
-                  {{ section.settings.image_1 | img_url: size}}
-                  {{ size | replace: "x", "w" }}{% unless forloop.last %},{% endunless %}
-                  {%- endfor -%}
-                ">
+          {% unless section.settings.image_1 == blank %}
+            <picture class="cat-pic-card">
+              <source srcset="{{ section.settings.image_1 | img_url: sizes.last }} 1x, {{ section.settings.image_1 | img_url: sizes.last, scale: 2 }} 2x" media="(min-width: 768px)">
+              <img class="img-responsive" 
+                src="{{ section.settings.image_1 | img_url: sizes.first }}"
+                data-src="{{ section.settings.image_1 | img_url: sizes.last }}"
+                alt="{{ section.settings.image_1.alt }}"
+                srcset="{%- for size in sizes -%}
+                    {{ section.settings.image_1 | img_url: size}}
+                    {{ size | replace: "x", "w" }}{% unless forloop.last %},{% endunless %}
+                    {%- endfor -%}
+                  ">
+            </picture>
           {% endunless %}
         </a>
       </div>
@@ -25,15 +28,18 @@
       <div class="image__container">
         <a href="{{section.settings.category_link_2}}">
           {% unless section.settings.image_2 == blank %}
-            <img class="img-responsive" 
-              src="{{ section.settings.image_2 | img_url: sizes.first }}"
-              data-src="{{ section.settings.image_2 | img_url: sizes.last }}"
-              alt="{{ section.settings.image_2.alt }}"
-              srcset="{%- for size in sizes -%}
-                  {{ section.settings.image_2 | img_url: size}}
-                  {{ size | replace: "x", "w" }}{% unless forloop.last %},{% endunless %}
-                  {%- endfor -%}
-                ">
+            <picture class="cat-pic-card">
+              <source srcset="{{ section.settings.image_2 | img_url: sizes.last }} 1x, {{ section.settings.image_1 | img_url: sizes.last, scale: 2 }} 2x" media="(min-width: 768px)">
+              <img class="img-responsive" 
+                src="{{ section.settings.image_2 | img_url: sizes.first }}"
+                data-src="{{ section.settings.image_2 | img_url: sizes.last }}"
+                alt="{{ section.settings.image_2.alt }}"
+                srcset="{%- for size in sizes -%}
+                    {{ section.settings.image_2 | img_url: size}}
+                    {{ size | replace: "x", "w" }}{% unless forloop.last %},{% endunless %}
+                    {%- endfor -%}
+                  ">
+            </picture>
           {% endunless %} 
         </a>
       </div>
@@ -42,15 +48,18 @@
       <div class="image__container">
         <a href="{{section.settings.category_link_3}}">
           {% unless section.settings.image_3 == blank %}
-            <img class="img-responsive" 
-              src="{{ section.settings.image_3 | img_url: sizes.first }}"
-              data-src="{{ section.settings.image_3 | img_url: sizes.last }}"
-              alt="{{ section.settings.image_3.alt }}"
-              srcset="{%- for size in sizes -%}
-                  {{ section.settings.image_3 | img_url: size}}
-                  {{ size | replace: "x", "w" }}{% unless forloop.last %},{% endunless %}
-                  {%- endfor -%}
-                ">
+            <picture class="cat-pic-card">
+              <source srcset="{{ section.settings.image_3 | img_url: sizes.last }} 1x, {{ section.settings.image_1 | img_url: sizes.last, scale: 2 }} 2x" media="(min-width: 768px)">
+              <img class="img-responsive" 
+                src="{{ section.settings.image_3 | img_url: sizes.first }}"
+                data-src="{{ section.settings.image_3 | img_url: sizes.last }}"
+                alt="{{ section.settings.image_3.alt }}"
+                srcset="{%- for size in sizes -%}
+                    {{ section.settings.image_3 | img_url: size}}
+                    {{ size | replace: "x", "w" }}{% unless forloop.last %},{% endunless %}
+                    {%- endfor -%}
+                  ">
+            </picture>
           {% endunless %}
         </a>
       </div>
@@ -61,15 +70,18 @@
       <div class="image__container">
         <a href="{{section.settings.category_link_4}}">
           {% unless section.settings.image_4 == blank %}
-            <img class="img-responsive" 
-              src="{{ section.settings.image_4 | img_url: sizes.first }}"
-              data-src="{{ section.settings.image_4 | img_url: sizes.last }}"
-              alt="{{ section.settings.image_4.alt }}"
-              srcset="{%- for size in sizes -%}
-                  {{ section.settings.image_4 | img_url: size}}
-                  {{ size | replace: "x", "w" }}{% unless forloop.last %},{% endunless %}
-                  {%- endfor -%}
-                ">
+            <picture class="cat-pic-card">
+              <source srcset="{{ section.settings.image_4 | img_url: sizes.last }} 1x, {{ section.settings.image_1 | img_url: sizes.last, scale: 2 }} 2x" media="(min-width: 768px)">
+              <img class="img-responsive" 
+                src="{{ section.settings.image_3 | img_url: sizes.first }}"
+                data-src="{{ section.settings.image_3 | img_url: sizes.last }}"
+                alt="{{ section.settings.image_3.alt }}"
+                srcset="{%- for size in sizes -%}
+                    {{ section.settings.image_3 | img_url: size}}
+                    {{ size | replace: "x", "w" }}{% unless forloop.last %},{% endunless %}
+                    {%- endfor -%}
+                  ">
+            </picture>
           {% endunless %} 
         </a>
       </div>
